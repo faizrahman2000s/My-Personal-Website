@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tablink:hover {
+  background-color: #5E6A0D;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 1px;
+  text-align: center;
+}
+
+#Homepage {background-color:#666;}
+#MyFamily {background-color:green;}
+#Education {background-color:blue;}
+#Biodata {background-color:orange;}
+#Gallery {background-color:yellow;}
+#Contact {background-color:purple;}
+</style>
+</head>
+<body bgcolor="LightGray">
+
+<div id="Homepage" class="tabcontent">
+  <h1 style="color:blue">Homepage</h1>
+  <img src="fff.jpg" width="150" height="200">
+  <p style="color:blue">Muhammad Faiz Abd Rahman</p>
+</div>
+
+<div id="MyFamily" class="tabcontent">
+  <h1>My Family</h1>
+  <p>This is my family members</p> 
+</div>
+
+<div id="Education" class="tabcontent">
+  <h1>Education</h1>
+  <p>My Education Details</p>
+</div>
+
+<div id="Biodata" class="tabcontent">
+  <h1>Biodata</h1>
+  <p>My Biodata</p>
+</div>
+
+<div id="Gallery" class="tabcontent">
+  <h1>Gallery</h1>
+  <p>My Gallery</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1>Contact</h1>
+  <p>My Contact</p>
+</div>
+
+<div class="tab">
+<button class="tablink" onclick="openCity('Homepage', this, '#666')" id="defaultOpen"><b>Homepage</b></button>
+
+<form method="get" action="My Family.html">
+	<button class="tablink" onclick="openCity('MyFamily', this, 'green')">My Family</button>
+</form>
+
+<form method="get" action="Education.html">
+	<button class="tablink" onclick="openCity('Education', this, 'blue')">Education</button>
+</form>
+
+<form method="get" action="Biodata.html">
+	<button class="tablink" onclick="openCity('Biodata', this, 'orange')">Biodata</button>
+</form>
+
+<form method="get" action="Gallery.html">
+	<button class="tablink" onclick="openCity('Gallery', this, 'yellow')">Gallery</button>
+</form>
+
+<form method="get" action="Contact.html">
+	<button class="tablink" style="float:right" onclick="openCity('Contact', this, 'purple')">Contact</button>
+</form>
+</div>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script> 
+
+<style>
+div {background-image: url('bg.jpg');}
+img {border-radius: 50%;}
+</style>
+
+<br></br>
+<br></br>
+<div align="center">
+<h1>بسم الله الرحمن الرحيم</h1>
+</div>
+
+<br>
+<h2 align="center" >I Am Muhammad Faiz Bin Abd Rahman</h2>
+      <p align="center">I lived in <a href = "http://www.mdpmas.gov.my/ms/pelawat/info-pasir-mas" target="_blank">Pasir Mas</a>,Kelantan</p>
+      <p align="center">I am 20 years old this year.</p>
+      <p align="center">I was born in 6 March 2000 at <a href = "http://hrpz2.moh.gov.my/v3/" target="_blank">Hospital Raja Perempuan Zainab 2</a>, Kota Bharu, Kelantan</p>
+      <p align="center">I like to read Islamic Book and maintain a pretty big collection.</p>
+      <p align="center">My Secondary school is <a href = "https://unitkurikulumsmkbunutsusu.blogspot.com/" target="_blank">SMK Bunut Susu</a>, which is located near my house</p>
+      <p align="center">I continue my study in UiTM Cawangan Kedah</p>
+      <p align="center"> Wanted to know more about me. Feel free to explore this website</p>
+		
+
+<br>
+<br>
+<br>
+<br>      
+<div align="right">
+<h3><font color="red"><i>Let Fight Pandemic Covid-19 Together</i></font></h3>
+<img src="click.png" width="100" height="70">
+<a href="https://www.moh.gov.my/"><img src="covid.jpg" width="100" height="70"></a>
+</div>
+<br>
+<br>
+<br>
+<font color="green">This website is develop for IMD311(Introduction To Web Content Management and Design). 
+Any information or material are used for educational purpose only</font>
+<br>
+<font color="green">Recommended Browser(Google Chrome)</font>
+
+</body>
+</html>
