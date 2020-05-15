@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tab {
+  overflow: hidden;
+  border: 3px solid white;
+  background-color: #FFC300;
+}
+
+.tab button {
+  background-color: #FFC300;
+  float: left;
+  border: 1px solid blue;
+  outline: 1px solid blue;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tablink:hover {
+  background-color: yellow;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 1px;
+  text-align: center;
+}
+
+#Homepage {background-color:#555;}
+#MyFamily {background-color:#5E6A0D;}
+#Education {background-color:blue;}
+#Biodata {background-color:orange;}
+#Gallery {background-color:yellow;}
+#Contact {background-color:purple;}
+</style>
+</head>
+<body bgcolor="#EAD436">
+
+<div id="Homepage" class="tabcontent">
+  <h1 style="color:blue">Homepage</h1>
+  <img src="fff.jpg" width="150" height="200">
+  <p style="color:blue">Muhammad Faiz Abd Rahman</p>
+</div>
+
+<div id="MyFamily" class="tabcontent">
+  <h1>My Family</h1>
+  <img src="keluarga.jfif" width="250" height="200">
+  <p>This is my family members</p> 
+</div>
+
+<div id="Education" class="tabcontent">
+  <h1>Education</h1>
+  <p>My Education Details</p>
+</div>
+
+<div id="Biodata" class="tabcontent">
+  <h1>Biodata</h1>
+  <img src="biodata.jpg" width="250" height="200">
+  <p>My Biodata</p>
+</div>
+
+<div id="Gallery" class="tabcontent">
+  <h1>Gallery</h1>
+  <p>My Gallery</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1>Contact</h1>
+  <p>My Contact</p>
+</div>
+
+<div class="tab">
+<form method="get" action="index.html">
+<button class="tablink" onclick="openCity('Homepage', this, '#555')" >Homepage</button>
+</form>
+
+<form method="get" action="My Family.html">
+	<button class="tablink" onclick="openCity('MyFamily', this, '#5E6A0D')">My Family</button>
+</form>
+
+<form method="get" action="Education.html">
+	<button class="tablink" onclick="openCity('Education', this, 'blue')">Education</button>
+</form>
+
+
+<button class="tablink" onclick="openCity('Biodata', this, 'orange')"id="defaultOpen"><b>Biodata</b></button>
+
+
+<form method="get" action="Gallery.html">
+	<button class="tablink" onclick="openCity('Gallery', this, 'yellow')">Gallery</button>
+</form>
+
+<form method="get" action="Contact.html">
+	<button class="tablink" style="float:right" onclick="openCity('Contact', this, 'purple')">Contact</button>
+</form>
+</div>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<br></br>
+<br></br>
+<div align="center">
+<h1>Biodata</h1>
+</div>
+
+<br>
+<div align="center">
+<img src="me.jpg" alt="My Picture" width="150" height="90"> 
+</div>
+  <p align="center">Full Name: Muhammad Faiz Bin Abd Rahman</p>
+  <p align="center">Age: 20 years old</p>
+  <p align="center">Place of Study: UiTM Kedah</p>
+   <p align="center">Programme: Diploma in Library Management</p>
+  <p align="center">Hobby: Playing games and reading books</p>
+  <p align="center">Place of Birth: HRPZ 2, Kota Bharu, Kelantan</p>
+<br>
+<br>
+<br>
+<h2>Experiences</h2>
+
+  <p><font size="4">I have 6 weeks experience working at <a href = "http://www.kelantanlibrary.gov.my/v3/index.php/ms/" target="_blank">PPAK</a> or also known as Perbadanan Perpustakaan Awam Kelantan during my practical last semester</font></p>
+  <p><font size="4">I hold a position as Exco Dakwah dan Tarbiah in Sahabat Yadim for 2 semesters</font></p>
+  <p><font size="4">I hold a position as Exco Semester One and Two in Association of Library Management(ALIM) for 2 semesters</font><p>
+<br></br>
+
+<h2>Skills</h2>
+  <p><font size="4">I have a good skills in using almost all microsoft apps such as Word, Excel and Powerpoint</font><p>
+  <p><font size="4">I also able to using editing software such as Adobe Photoshop, Illustrator and inDesign quite well.</font><p>
+
+<br></br>
+
+<center>
+<h2>My E-resume Video</h2>
+<video width="480" height="360" controls>
+  <source src="My Video1.mp4" type="video/mp4">
+</video>
+</center>
+
+
+</body>
+</html>

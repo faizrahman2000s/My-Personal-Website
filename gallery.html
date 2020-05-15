@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.tab {
+  overflow: hidden;
+  border: 3px solid white;
+  background-color: #F8FF8A;
+}
+
+.tab button {
+  background-color: #F8FF8A;
+  float: left;
+  border: 1px solid black;
+  outline: 1px solid black;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: purple;
+}
+
+table, th, 
+td {border: 1px solid black;}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 1px;
+  text-align: center;
+}
+
+#Homepage {background-color:#555;}
+#MyFamily {background-color:#5E6A0D;}
+#Education {background-color:blue;}
+#Biodata {background-color:orange;}
+#Gallery {background-color:yellow;}
+#Contact {background-color:purple;}
+</style>
+</head>
+<body bgcolor="#E6F044">
+
+<div id="Homepage" class="tabcontent">
+  <h1 style="color:blue">Homepage</h1>
+  <img src="fff.jpg" width="150" height="200">
+  <p style="color:blue">Muhammad Faiz Abd Rahman</p>
+</div>
+
+<div id="MyFamily" class="tabcontent">
+  <h1>My Family</h1>
+ 
+  <p>This is my family members</p> 
+</div>
+
+<div id="Education" class="tabcontent">
+  <h1>Education</h1>
+  <p>My Education Details</p>
+</div>
+
+<div id="Biodata" class="tabcontent">
+  <h1>Biodata</h1>
+  <p>My Biodata</p>
+</div>
+
+<div id="Gallery" class="tabcontent">
+  <h1 style="color:blue" >Gallery</h1>
+  <img src="gallery.jpg" width="250" height="200">
+  <p style="color:blue" >My Gallery</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1>Contact</h1>
+  <p>My Contact</p>
+</div>
+
+<div class="tab">
+<form method="get" action="Index.html">
+<button class="tablink" onclick="openCity('Homepage', this, '#555')" >Homepage</button>
+</form>
+
+<form method="get" action="My Family.html">
+	<button class="tablink" onclick="openCity('MyFamily', this, '#5E6A0D')">My Family</button>
+</form>
+
+<form method="get" action="Education.html">
+	<button class="tablink" onclick="openCity('Education', this, 'blue')">Education</button>
+</form>
+
+<form method="get" action="Biodata.html">
+	<button class="tablink" onclick="openCity('Biodata', this, 'orange')">Biodata</button>
+</form>
+
+
+<button class="tablink" onclick="openCity('Gallery', this, 'yellow')"id="defaultOpen"><b>Gallery</b></button>
+
+
+<form method="get" action="Contact.html">
+	<button class="tablink" style="float:right" onclick="openCity('Contact', this, 'purple')">Contact</button>
+</form>
+</div>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<br></br>
+<br></br>
+<div align="center">
+<h1>Gallery</h1>
+<div class="tab">
+<h2>My Family</h2>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="eid1.jpg">
+      <img src="eid1.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Me and my SIS during Hari Raya</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="eid2.jpg">
+      <img src="eid2.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Happy morning before Eid prayer</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="eid3.jpg">
+      <img src="eid3.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Big Family</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family.jpg">
+      <img src="family.jpg" width="600" height="400">
+    </a>
+    <div class="desc">My first sister and her family</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family2.jpg">
+      <img src="family2.jpg" width="600" height="400">
+    </a>
+    <div class="desc">My Sister and mother</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family3.jpg">
+      <img src="family3.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Selfie of the year</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family4.jpg">
+      <img src="family4.jpg" width="600" height="400">
+    </a>
+    <div class="desc">My brother</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family5.jpg">
+      <img src="family5.jpg" width="600" height="400">
+    </a>
+    <div class="desc">My third sister</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family6.jpg">
+      <img src="family6.jpg" width="600" height="400">
+    </a>
+    <div class="desc">My late beloved father</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family7.jpg">
+      <img src="family7.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Before class</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family8.jpg">
+      <img src="family8.jpg" width="600" height="400">
+    </a>
+    <div class="desc">My niece</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family9.jpg">
+      <img src="family9.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Grandmother</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family10.jpg">
+      <img src="family10.jpg" width="600" height="400">
+    </a>
+    <div class="desc">2 twins</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family11.jpg">
+      <img src="family11.jpg" width="600" height="400">
+    </a>
+    <div class="desc">2 of my sister</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family12.jpg">
+      <img src="family12.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Waiting in airport</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family13.jpg">
+      <img src="family13.jpg" width="600" height="400">
+    </a>
+    <div class="desc">OTW to making Haji</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family14.jpg">
+      <img src="family14.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Visiting me at UiTM Kedah</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family15.jpg">
+      <img src="family15.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Visiting me at UiTM Kedah 2</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family16.jpg">
+      <img src="family16.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Big sisters</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="family17.jpg">
+      <img src="family17.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Holiday</div>
+  </div>
+</div>
+</div>
+<br></br>
+<br></br>
+
+
+
+<div align="center">
+<div class="tab">
+<h2>My Friends</h2>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan1.jpg">
+      <img src="kawan1.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Visiting old school</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan2.jpg">
+      <img src="kawan2.jpg" width="600" height="400">
+    </a>
+    <div class="desc">LEPAK with old buddies</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan3.jpg">
+      <img src="kawan3.jpg" width="600" height="400">
+    </a>
+    <div class="desc">With Imam Muda</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan4.jpg">
+      <img src="kawan4.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Usrah at Surau Malinja</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan5.jpg">
+      <img src="kawan5.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Visiting old school 2</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan6.jpg">
+      <img src="kawan6.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Sahabat YADIM Dinner</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan7.jpg">
+      <img src="kawan7.jpg" width="600" height="400">
+    </a>
+    <div class="desc">KIM1204A</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan8.jpg">
+      <img src="kawan8.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Festival Maulid</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan9.jpg">
+      <img src="kawan9.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Last picture sem 3</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kawan10.jpg">
+      <img src="kawan10.jpg" width="600" height="400">
+    </a>
+    <div class="desc">Last Class</div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="clearfix"></div>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tab {
+  overflow: hidden;
+  border: 3px solid white;
+  background-color: green;
+}
+
+.tab button {
+  background-color: green;
+  float: left;
+  border: 1px solid red;
+  outline: 1px solid red;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tablink:hover {
+  background-color: blue;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+table, th, 
+td {border: 1px solid black;}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 1px;
+  text-align: center;
+}
+
+#Homepage {background-color:#555;}
+#MyFamily {background-color:#5E6A0D;}
+#Education {background-color:blue;}
+#Biodata {background-color:orange;}
+#Gallery {background-color:yellow;}
+#Contact {background-color:purple;}
+</style>
+</head>
+<body bgcolor="#36EA43">
+
+<div id="Homepage" class="tabcontent">
+  <h1 style="color:blue">Homepage</h1>
+  <img src="fff.jpg" width="150" height="200">
+  <p style="color:blue">Muhammad Faiz Abd Rahman</p>
+</div>
+
+<div id="MyFamily" class="tabcontent">
+  <h1>My Family</h1>
+  <img src="keluarga.jfif" width="250" height="200">
+  <p>This is my family members</p> 
+</div>
+
+<div id="Education" class="tabcontent">
+  <h1>Education</h1>
+  <p>My Education Details</p>
+</div>
+
+<div id="Biodata" class="tabcontent">
+  <h1>Biodata</h1>
+  <p>My Biodata</p>
+</div>
+
+<div id="Gallery" class="tabcontent">
+  <h1>Gallery</h1>
+  <p>My Gallery</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1>Contact</h1>
+  <p>My Contact</p>
+</div>
+
+<div class="tab">
+<form method="get" action="Index.html">
+<button class="tablink" onclick="openCity('Homepage', this, '#555')" >Homepage</button>
+</form>
+
+<button class="tablink" onclick="openCity('MyFamily', this, '#5E6A0D')"id="defaultOpen"><b>My Family</b></button>
+
+<form method="get" action="Education.html">
+	<button class="tablink" onclick="openCity('Education', this, 'blue')">Education</button>
+</form>
+
+<form method="get" action="Biodata.html">
+	<button class="tablink" onclick="openCity('Biodata', this, 'orange')">Biodata</button>
+</form>
+
+<form method="get" action="Gallery.html">
+	<button class="tablink" onclick="openCity('Gallery', this, 'yellow')">Gallery</button>
+</form>
+
+<form method="get" action="Contact.html">
+	<button class="tablink" style="float:right" onclick="openCity('Contact', this, 'purple')">Contact</button>
+</form>
+</div>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<br></br>
+<br></br>
+<div align="center">
+<h1>My Family</h1>
+
+<img src="keluarga.jfif" width="500" height="350">
+</div>
+
+<br></br>
+<table  align="center" cellpadding="2" cellspacing="2">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Relationship</th>
+    <th>Education</th>
+  </tr>
+  <tr>
+    <td>Rohana Binti Mohamed</td>
+    <td>54</td>
+    <td>Mother</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Siti Nor Fadhlina Binti Abd Rahman</td>
+    <td>33</td>
+    <td>Sister</td>
+    <td>UPSI</td>
+  </tr>
+  <tr>
+    <td>Muhammad Faisal Bin Abd Rahman</td>
+    <td>32</td>
+    <td>Brother</td>
+    <td>UniSEL</td>
+  </tr>
+  <tr>
+    <td>Siti Nor Farawahida Binti Abd Rahman</td>
+    <td>28</td>
+    <td>Sister</td>
+    <td>UIA</td>
+  </tr>
+  <tr>
+    <td>Siti Nor Farahayu Binti Abd Rahman</td>
+    <td>25</td>
+    <td>Sister</td>
+    <td>UTHM</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
+
